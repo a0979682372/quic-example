@@ -9,7 +9,6 @@ import (
 	"encoding/pem"
 	"fmt"
 	"math/big"
-
 	"os"
 	"time"
 
