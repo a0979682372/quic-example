@@ -26,7 +26,7 @@ func main() {
 
 func Server() error {
 	const addr = "10.0.2.15:30000"
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second*2000)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Hour)
 	defer cancel()
 
 	listener, err := quic.ListenAddr(addr, generateTLSConfig(), &quic.Config{

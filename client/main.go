@@ -2,15 +2,12 @@ package main
 
 import (
 	"bufio"
-	//"context"
 	"crypto/rand"
 	"crypto/rsa"
 	"crypto/tls"
 	"crypto/x509"
 	"encoding/pem"
 	"fmt"
-
-	//"log"
 	"math/big"
 
 	"os"
@@ -21,16 +18,8 @@ import (
 
 const addr = "10.0.2.15:30000"
 
-var (
-	device  string = "enp0s9"
-	err     error
-	timeout time.Duration = 1 * time.Second
-	m_ch    chan []byte
-)
-
 func main() {
 	fmt.Println("hello")
-	m_ch = make(chan []byte, 256)
 	err := Client()
 	if err != nil {
 		fmt.Println("client err")
